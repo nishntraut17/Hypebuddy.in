@@ -20,7 +20,6 @@ const Works = () => {
   const darkMode = theme.state.darkMode;
 
   // transition
-  let wwidth = window.innerWidth;
   return (
     <div className="works" id="works">
       {/* left side */}
@@ -52,12 +51,11 @@ const Works = () => {
         {/* right side */}
       </div>
       <div className="w-right">
-        { wwidth >= 800 ? (
-          <motion.div
+        <motion.div
           initial={{ rotate: 45 }}
           whileInView={{ rotate: 0 }}
           viewport={{ margin: "-40px" }}
-          transition={{ duration: 3.5, type: "spring", delay:0.5 }}
+          transition={{ duration: 3, type: "spring", delay:0.2 }}
           className="w-mainCircle"
         >
           <div className="w-secCircle">
@@ -76,30 +74,6 @@ const Works = () => {
             <img src={Bellcat} alt="" style={{width:"200px", height:"200px", borderRadius: "100%"}}/>
           </div>
         </motion.div>
-        ) : (
-          <motion.div
-          initial={{ rotate: 0 }}
-          whileInView={{ rotate: 0 }}
-          viewport={{ margin: "-40px" }}
-          className="w-mainCircle"
-        >
-          <div className="w-secCircle">
-            <img src={Classplus} alt="" style={{width:"150px", height:"150px", borderRadius: "100%"}}/>
-          </div>
-          <div className="w-secCircle">
-            <img src={Clatapult} alt="" style={{width:"200px", height:"200px", borderRadius: "100%"}}/>
-          </div>
-          <div className="w-secCircle">
-            <img src={Aalsi} alt="" style={{width:"150px", height:"150px", borderRadius: "100%"}}/>
-          </div>{" "}
-          <div className="w-secCircle">
-            <img src={JoshTalk} alt="" style={{width:"150px", height:"150px", borderRadius: "100%"}}/>
-          </div>
-          <div className="w-secCircle">
-            <img src={Bellcat} alt="" style={{width:"200px", height:"200px", borderRadius: "100%"}}/>
-          </div>
-        </motion.div>
-        )}
         {/* background Circles */}
         <div className="w-backCircle blueCircle"></div>
         <div className="w-backCircle yellowCircle"></div>
