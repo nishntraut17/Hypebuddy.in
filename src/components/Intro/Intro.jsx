@@ -15,7 +15,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 const Intro = () => {
   // Transition
-  const transition = { duration: 2, type: "spring" };
+  const transition = { duration: 2, type: "spring" ,delay: 0.1};
 
   // context
   const theme = useContext(themeContext);
